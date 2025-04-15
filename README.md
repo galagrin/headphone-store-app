@@ -1,54 +1,60 @@
-# React + TypeScript + Vite
+# Audio Accessories Shop App 🎧
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Приложение интернет-магазин аудио аксессуаров, разработанный с использованием React 19 и TypeScript. Проект включает каталог товаров и корзину покупок с полным функционалом управления заказами.
 
-Currently, two official plugins are available:
+## Особенности 📝
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-   Полностью адаптивный дизайн для всех устройств
+-   Интерактивные элементы с анимацией при наведении
+-   Удобная навигация между страницами
+-   Сохранение состояния корзины между сессиями (SessionStorage)
+-   Динамическое обновление счетчика товаров и итоговой суммы
 
-## Expanding the ESLint configuration
+## Технологии 🛠️
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+-   React 19
+-   TypeScript
+-   React Router 7
+-   Module SCSS для стилизации
+-   Vite в качестве сборщика
+-   React Context API для управления состоянием
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Структура проекта
+
+-   Каталог товаров (главная страница)
+-   Корзина покупок (страница корзины)
+-   Данные о товарах хранятся в файле `headphones.ts`
+
+## Функциональность
+
+-   Добавление товаров в корзину с главной страницы
+-   Динамический счетчик товаров в шапке сайта
+-   Возможность изменения количества товаров в корзине
+-   Удаление товаров из корзины
+-   Автоматический пересчет итоговой суммы заказа
+
+## Установка и запуск
+
+```bash
+# Клонирование репозитория
+git clone https://github.com/galagrin/headphone-store-app
+
+# Установка зависимостей
+npm install
+
+# Запуск в режиме разработки
+npm run dev
+
+# Сборка для продакшена
+npm run build
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Масштабируемость
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Проект разработан с учетом возможного масштабирования:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+-   Модульная структура компонентов
+-   Типизация данных с помощью TypeScript
+-   Использование React Context для управления состоянием (с возможностью замены на Zustand или MobX при необходимости)
+
+## Скриншоты
