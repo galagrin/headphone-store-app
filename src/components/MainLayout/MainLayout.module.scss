@@ -1,0 +1,15 @@
+@use "../../styles/mixins";
+.mainLayout {
+    min-height: 100dvh;
+    @include mixins.flex(column, flex-start, center);
+    margin: 0, auto;
+}
+
+.mainWrapper {
+    max-width: 1135px;
+    height: 100%;
+    width: 100%;
+    flex-grow: 1;
+    @include mixins.flex(column, space-between, center, 20px);
+    margin-top: 80px;
+}

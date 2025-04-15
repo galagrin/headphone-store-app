@@ -1,0 +1,4 @@
+@use "../../styles/mixins";
+.cartListWrapper {
+    @include mixins.flex(column, flex-start, center, 18px);
+}

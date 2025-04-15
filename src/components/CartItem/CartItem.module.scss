@@ -1,0 +1,48 @@
+@use "../../styles/mixins";
+.cartItemWrapper {
+    width: 633px;
+    height: 218px;
+    padding: 18px 28px 15px 18px;
+    border-radius: 30px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+    background: var(--white);
+    @include mixins.flex(column, space-between, stretch);
+    position: relative;
+    .trashIcon {
+        position: absolute;
+        top: 18px;
+        right: 28px;
+        cursor: pointer;
+    }
+    @media (max-width: 644px) {
+        width: calc(100vw - 46px);
+    }
+}
+.productInfo {
+    @include mixins.flex(row, start, center, 24px);
+    .productImage {
+        width: 146px;
+        object-fit: contain;
+        max-height: 157px;
+    }
+}
+.productTitle {
+    font-weight: 500;
+    font-size: 17px;
+    margin-bottom: 12px;
+}
+.productPrice {
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--cart-price-color);
+}
+.counterWrapper {
+    @include mixins.flex(row, space-between, center);
+    margin-left: 15px;
+}
+.totalPrice {
+    font-weight: 600;
+    font-size: 15px;
+    text-align: right;
+    color: var(--main-text-color);
+}

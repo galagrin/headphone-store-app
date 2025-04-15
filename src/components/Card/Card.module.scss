@@ -1,0 +1,94 @@
+@use "../../styles/mixins";
+.cardWrapper {
+    min-width: 350px;
+    min-height: 407px;
+    height: 100%;
+    padding: 15px 18px 26px 23px;
+    background-color: var(--white);
+    border-radius: 30px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+    @include mixins.flex(column, space-between, center);
+
+    .imageContainer {
+        min-height: 270px;
+        flex: 1;
+        @include mixins.flex(row, center, center);
+
+        img {
+            max-width: 219px;
+            max-height: 250px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+        }
+    }
+}
+
+.cardContent {
+    width: 100%;
+    @include mixins.flex(column, space-between, center, 15px);
+
+    .discription,
+    .actions {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+    }
+
+    .actions {
+        margin-top: auto;
+        button {
+            font-weight: 600;
+            font-size: 17px;
+            color: var(--black);
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            &:hover {
+                transform: scale(1.1);
+                color: var(--main-btn-hover);
+            }
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            font-size: 17px;
+            color: var(--gray);
+            line-height: 1;
+
+            img {
+                width: 25px;
+                height: 23px;
+                margin-bottom: 0;
+                display: block;
+            }
+        }
+    }
+
+    .discription {
+        @include mixins.flex(row, space-between, start);
+        font-weight: 600;
+        font-size: 17px;
+        .title {
+            color: var(--main-text-color);
+        }
+        .priceWrapper {
+            @include mixins.flex(column, center, flex-end);
+        }
+        .price {
+            color: var(--accent-text-color);
+        }
+
+        .originalPrice {
+            font-size: 13px;
+            text-decoration: line-through;
+            color: var(--counter-btn-color);
+        }
+    }
+}

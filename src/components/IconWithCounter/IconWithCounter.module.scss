@@ -1,0 +1,21 @@
+.iconContainer {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+.icon {
+    width: 23px;
+    height: 23px;
+}
+.iconCounter {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: var(--accent-text-color);
+    color: var(--white);
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    line-height: 18px;
+}

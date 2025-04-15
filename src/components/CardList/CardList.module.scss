@@ -1,0 +1,28 @@
+.cardList {
+    display: grid;
+    grid-gap: 30px;
+    margin: 0 auto;
+    max-width: 1200px;
+
+    grid-template-columns: 1fr;
+
+    // На планшетах - 2 карточки в ряд
+    @media (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    // На десктопах - 3 карточки в ряд
+    @media (min-width: 1110px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+.heading,
+h2 {
+    padding-bottom: 20px;
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--gray);
+}
+h2 {
+    padding-top: 28px;
+}

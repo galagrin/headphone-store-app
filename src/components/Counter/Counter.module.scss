@@ -1,0 +1,29 @@
+@use "../../styles/mixins";
+.counter {
+    @include mixins.flex(row, space-between, center, 25px);
+}
+
+.counterButton {
+    @include mixins.flex(row, center, center);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--counter-btn-color);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+
+    &:hover {
+        background-color: var(--counter-btn-hover);
+    }
+}
+.counterValue {
+    font-weight: 600;
+    font-size: 17px;
+}
+.counterIcon {
+    line-height: 1;
+    @include mixins.flex(row, center, center);
+    font-size: 30px;
+}

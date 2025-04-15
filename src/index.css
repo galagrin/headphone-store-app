@@ -1,0 +1,59 @@
+:root {
+    --main-bg-color: #eaeaea;
+    --main-text-color: #1c1c27;
+    --accent-text-color: #ffa542;
+    --white: #ffffff;
+    --black: #000000;
+    --gray: #838383;
+    --main-btn-hover: #ff8c00;
+
+    --cart-price-color: #aaa;
+    --counter-btn-color: #ffce7f;
+    --counter-btn-hover: #f7bf65;
+
+    font-family: Montserrat, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    color-scheme: light dark;
+    color: #1c1c27;
+    background-color: #eaeaea;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+}
+a {
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+}
+@media (prefers-color-scheme: light) {
+    :root {
+        --main-bg-color: #eaeaea;
+        --main-text-color: #1c1c27;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --main-bg-color: #454545;
+        --main-text-color: #eaeaea;
+    }
+}

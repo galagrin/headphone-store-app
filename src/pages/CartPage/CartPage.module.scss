@@ -1,0 +1,17 @@
+@use "../../styles/mixins";
+.cartWrapper {
+    @include mixins.flex(row, flex-start, start, 127px);
+
+    @media (max-width: 1124px) {
+        @include mixins.flex(row, flex-start, start, 50px);
+    }
+    @media (max-width: 1044px) {
+        @include mixins.flex(column, flex-start, center, 50px);
+    }
+}
+h1 {
+    margin-bottom: 13px;
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--main-text-color);
+}
