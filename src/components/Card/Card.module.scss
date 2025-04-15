@@ -26,7 +26,7 @@
 
 .cardContent {
     width: 100%;
-    @include mixins.flex(column, space-between, center, 15px);
+    @include mixins.flex(column, space-between, center, 8px);
 
     .discription,
     .actions {

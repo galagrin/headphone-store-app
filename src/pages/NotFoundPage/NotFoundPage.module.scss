@@ -1,0 +1,16 @@
+@use "../../styles/mixins";
+.contentWrapper {
+    @include mixins.flex(column, center, center);
+    button {
+        border: none;
+        outline: none;
+        border-radius: 50px;
+        padding: 10px;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        &:hover {
+            color: var(--white);
+            background-color: var(--main-btn-hover);
+        }
+    }
+}

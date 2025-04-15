@@ -18,7 +18,13 @@ export const CartItem = ({ item, deleteFromCart }: CartItemProps) => {
 
     return (
         <div className={styles.cartItemWrapper}>
-            <img src={TrashCanIcon} alt="корзина" className={styles.trashIcon} onClick={() => deleteFromCart(id)} />
+            <img
+                src={TrashCanIcon}
+                alt="корзина"
+                className={styles.trashIcon}
+                onClick={() => deleteFromCart(id)}
+                aria-label="Удалить из корзины"
+            />
             <div className={styles.productInfo}>
                 <img src={img} alt="фото товара" className={styles.productImage} />
                 <div className={styles.productDetails}>

@@ -47,13 +47,11 @@ button {
 @media (prefers-color-scheme: light) {
     :root {
         --main-bg-color: #eaeaea;
-        --main-text-color: #1c1c27;
     }
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
         --main-bg-color: #454545;
-        --main-text-color: #eaeaea;
     }
 }
