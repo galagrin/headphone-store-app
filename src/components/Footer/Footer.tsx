@@ -1,18 +1,15 @@
-
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { Logo } from "../../shared/Logo/Logo";
 import Telegram from "../../assets/Telegram.svg";
 import VK from "../../assets/VK.svg";
 import Whatsapp from "../../assets/Whatsapp.svg";
-import Language from "../../assets/language.svg";
+import { LanguageSelector } from "../LanguageSelector";
 
 import styles from "./Footer.module.scss";
 
 export const Footer = () => {
     const [selectedLanguage, setSelectedLanguage] = useState("Рус");
-
-    const languages = ["Каз", "Рус", "Eng"];
 
     const handleLanguageChange = (language: string) => {
         if (language !== selectedLanguage) {
@@ -35,17 +32,7 @@ export const Footer = () => {
                     <li>Условия сервиса</li>
                 </ul>
                 <ul className={styles.languages}>
-                    <img src={Language} alt="language change" />
-
-                    {languages.map((language) => (
-                        <li
-                            key={language}
-                            onClick={() => handleLanguageChange(language)}
-                            className={selectedLanguage === language ? styles.selected : ""}
-                        >
-                            {language}
-                        </li>
-                    ))}
+                    <LanguageSelector selectedLanguage={selectedLanguage} onLanguageChange={handleLanguageChange} />
                 </ul>
             </div>
             <div className={styles.social}>

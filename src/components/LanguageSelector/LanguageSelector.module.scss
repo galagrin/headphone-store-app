@@ -1,0 +1,13 @@
+@use "../../styles/mixins";
+.languages {
+    @include mixins.flex(row, center, center, 15px);
+
+    li {
+        color: var(--black);
+        cursor: pointer;
+
+        &.selected {
+            color: var(--accent-text-color);
+        }
+    }
+}
