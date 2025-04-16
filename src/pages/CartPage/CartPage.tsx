@@ -9,8 +9,7 @@ export const CartPage = () => {
             <h1>Корзина</h1>
             <div className={styles.cartWrapper}>
                 <CartItemsList />
-                <CheckoutSummary
-                />
+                <CheckoutSummary />
             </div>
         </>
     );
