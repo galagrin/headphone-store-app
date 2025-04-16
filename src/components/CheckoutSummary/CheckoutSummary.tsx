@@ -3,11 +3,7 @@ import { Context } from "../../store/Context";
 import { formatNumber } from "../../utils/formatNumber";
 import styles from "./CheckoutSummary.module.scss";
 
-interface CheckoutSummaryProps {
-    onCheckout: () => void;
-}
-
-export const CheckoutSummary = ({ onCheckout }: CheckoutSummaryProps) => {
+export const CheckoutSummary = () => {
     const { totalPrice } = useContext(Context);
     return (
         <div className={styles.container}>
@@ -16,9 +12,7 @@ export const CheckoutSummary = ({ onCheckout }: CheckoutSummaryProps) => {
                 <div className={styles.amount}>₽ {formatNumber(totalPrice)}</div>
             </div>
 
-            <button className={styles.button} onClick={onCheckout}>
-                Перейти к оформлению
-            </button>
+            <button className={styles.button}>Перейти к оформлению</button>
         </div>
     );
 };
