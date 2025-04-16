@@ -11,6 +11,8 @@
     --counter-btn-color: #ffce7f;
     --counter-btn-hover: #f7bf65;
 
+    --error-msg-color: #d9534f;
+
     font-family: Montserrat, sans-serif;
     line-height: 1.5;
     font-weight: 400;

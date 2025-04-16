@@ -9,11 +9,7 @@ export const CartPage = () => {
             <h1>Корзина</h1>
             <div className={styles.cartWrapper}>
                 <CartItemsList />
-                <CheckoutSummary
-                    onCheckout={function (): void {
-                        throw new Error("Function not implemented.");
-                    }}
-                />
+                <CheckoutSummary />
             </div>
         </>
     );

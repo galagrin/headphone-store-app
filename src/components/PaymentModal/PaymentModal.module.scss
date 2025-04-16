@@ -1,0 +1,123 @@
+@use "../../styles/mixins";
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    @include mixins.flex(row, center, center);
+    z-index: 1000;
+}
+
+.modal {
+    background-color: #fff;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.header {
+    @include mixins.flex(row, space-between, center);
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+
+    h2 {
+        margin: 0;
+        font-size: 20px;
+        font-weight: 600;
+    }
+}
+
+.closeButton {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #999;
+
+    &:hover {
+        color: #333;
+    }
+}
+
+.body {
+    padding: 20px;
+}
+
+.formGroup {
+    margin-bottom: 16px;
+
+    label {
+        display: block;
+        margin-bottom: 6px;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    input {
+        width: 100%;
+        padding: 10px 12px;
+        border: 1px solid var(--gray);
+        border-radius: 4px;
+        font-size: 16px;
+
+        &:focus {
+            outline: none;
+            border-color: var(--counter-btn-color);
+        }
+    }
+}
+
+.formRow {
+    display: flex;
+    gap: 16px;
+
+    .formGroup {
+        flex: 1;
+    }
+}
+
+.error {
+    display: block;
+    color: var(--error-msg-color);
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.totalAmount {
+    margin: 20px 0;
+    padding: 16px;
+    background-color: var(--cart-price-color);
+    border-radius: 4px;
+    @include mixins.flex(row, space-between, center);
+    font-size: 18px;
+
+    strong {
+        font-weight: 600;
+    }
+}
+
+.submitButton {
+    width: 100%;
+    background-color: var(--counter-btn-color);
+    color: var(--main-text-color);
+    border: none;
+    border-radius: 4px;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover {
+        background-color: var(--counter-btn-hover);
+    }
+
+    &:active {
+        background-color: var(--counter-btn-hover);
+    }
+}
