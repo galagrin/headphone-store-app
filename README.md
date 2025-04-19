@@ -58,3 +58,8 @@ npm run build
 -   Использование React Context для управления состоянием (с возможностью замены на Zustand или MobX при необходимости)
 
 ## Скриншоты
+<img src="https://github.com/user-attachments/assets/a86b9ca8-1091-4a67-986f-1b3be67640c1" width="400">
+
+<img src="https://github.com/user-attachments/assets/7ebb4da6-774a-4087-95c4-2b3578267f31" width="400">
+
+
